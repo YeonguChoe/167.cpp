@@ -2,7 +2,7 @@
 - 컴파일러: G++ 8.3
 
 ## Stream
-- Definition: sequence of data that is transferred between a program and an input or output source, such as a file, keyboard, or network connection.
+- Definition: [sequence of data that is transferred between a program and an input or output source, such as a file, keyboard, or network connection.](https://en.wikipedia.org/wiki/Stream_(computing))
 
 ### ofstream
 - output_file_stream_object << "내용"와 같은 코드는 출력 스트림에 "내용" 문자열과 개행문자를 기록한다. 이 때, 실제 파일에 쓰기 작업이 발생하지 않고, 데이터는 출력 스트림의 버퍼에 임시로 저장된다.
