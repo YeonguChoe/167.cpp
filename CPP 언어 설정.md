@@ -1,4 +1,5 @@
-# C++ 언어 설정
+# CPP 언어 설정
+- 컴파일러: G++ 8.3
 
 ## Stream
 - Definition: sequence of data that is transferred between a program and an input or output source, such as a file, keyboard, or network connection.
