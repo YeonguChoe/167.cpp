@@ -89,3 +89,20 @@ IntStream.range(0, gEdges).forEach(i -> {
              System.out.println(i); // 정수 i를 출력한다.
          });
       ```
+
+### Creating a Stream out of an array
+
+```java 
+// Stream을 사용해서 1줄을 읽고, 공백 문자를 기준으로 문자열을 분할한 후, 분할된 부분을 정수로 cast 하고, 리스트로 반환한다.
+List<Integer> candles = Stream.of(br.readLine().replaceAll("\\s+$", "").split(" "))
+        .map(Integer::parseInt)
+        .collect(toList());
+```
+
+- Steram.of
+    - 배열을 Stream 자료형으로 변환 한다.
+    - ```java 
+      String[] textArray = {"One", "Two", "Three"}; // 문자열을 담은 배열을 생성한다.
+      Stream<String> texts = Stream.of(textArray); // textArray 배열로부터 String자료형인 Stream을 생성합니다.
+      ```
+      
