@@ -2,7 +2,7 @@
 
 - 컴파일 환경: OpenJDK 17.0.1
 
-### File Writer
+### Writing data to a file
 
 ```java
 BufferedWriter bw = new BufferedWriter(new FileWriter("<파일이름>"));
@@ -27,3 +27,24 @@ BufferedWriter bw = new BufferedWriter(new FileWriter("<파일이름>"));
         bw.close(); // close를 안하면 저장이 안된다.```
     - documentation: https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/io/BufferedWriter.html
 
+### Reading data from a file
+
+```java 
+BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+```
+
+### another
+
+```java
+ IntStream.range(0, gEdges).forEach(i -> {
+            try {
+                String[] gFromToWeight = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+                gFrom.add(Integer.parseInt(gFromToWeight[0]));
+                gTo.add(Integer.parseInt(gFromToWeight[1]));
+                gWeight.add(Integer.parseInt(gFromToWeight[2]));
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+```
