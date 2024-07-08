@@ -33,8 +33,41 @@ TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVaria
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter
 
 - StreamWriter 클래스
+  - 텍스트 Stream을 만든다.
   - 파일에 텍스트 데이터를 입력하는데 사용한다.
   - ```C#
     StreamWriter textWriter = new StreamWriter(path, true);
     ```
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter
+
+```C#
+textWriter.Write("Sentence");
+```
+ 
+- Write(<내용>)
+  - 문자열을 텍스트 Stream에 추가한다.
+  -  documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter.write?view=net-8.0#system-io-textwriter-write(system-string)
+
+```C#
+textWriter.WriteLine("Sentence");
+```
+
+- WriteLine(<내용>)
+  - 문자열과 줄바꿈 문자 `\n`를 텍스트 Stream에 추가한다.
+  - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.writeline?view=net-8.0#system-io-streamwriter-writeline(system-string)
+
+```C#
+textWriter.Flush();
+```
+
+- Flush()
+  - 버퍼에 있는 데이터를 Stream으로 옮긴다.
+  - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush?view=net-8.0#system-io-streamwriter-flush
+
+```C#
+textWriter.Close();
+```
+
+- Close()
+  - Writer 객체를 없애고 디스크와의 연결을 해제한다.
+  - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter.close?view=net-8.0#system-io-textwriter-close
