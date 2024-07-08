@@ -2,7 +2,7 @@
 
 - 컴파일 환경: C#10 on .NET 6.0 runtime
 
-### Writing data to a file
+## Writing data to a file
 ```C#
 TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 ```
@@ -20,7 +20,6 @@ TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVaria
     string path = @"C:\Users\yeong\OneDrive\Desktop";
     ```
   - documentation: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
-
 
 - TextWriter 클래스
   - abstract 클래스라서 객체화를 할 수 없다.
@@ -40,34 +39,26 @@ TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVaria
     ```
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter
 
-```C#
-textWriter.Write("Sentence");
-```
+### textWriter.Write("Sentence");
  
 - Write(<내용>)
   - 문자열을 텍스트 Stream에 추가한다.
   -  documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter.write?view=net-8.0#system-io-textwriter-write(system-string)
 
-```C#
-textWriter.WriteLine("Sentence");
-```
+### textWriter.WriteLine("Sentence");
 
 - WriteLine(<내용>)
   - 문자열과 줄바꿈 문자 `\n`를 텍스트 Stream에 추가한다.
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.writeline?view=net-8.0#system-io-streamwriter-writeline(system-string)
 
-```C#
-textWriter.Flush();
-```
+### textWriter.Flush();
 
 - Flush()
   - 버퍼에 있는 데이터를 Stream으로 옮긴다.
   - Flush까지만 해도 파일에 저장이 된다.
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush?view=net-8.0#system-io-streamwriter-flush
 
-```C#
-textWriter.Close();
-```
+### textWriter.Close();
 
 - Close()
   - Writer 객체를 없애고 디스크와의 연결을 해제한다.
