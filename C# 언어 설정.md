@@ -29,6 +29,7 @@ TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVaria
     // 이렇게 하면 TextWriter에 있는 기능만 사용할 수 있다.
     TextWriter textWriter = new StreamWriter(path, true);
     ```
+  - 두번째 매개변수는 기존 파일에 내용을 추가 할지 여부이다.
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter
 
 - StreamWriter 클래스
