@@ -62,6 +62,7 @@ textWriter.Flush();
 
 - Flush()
   - 버퍼에 있는 데이터를 Stream으로 옮긴다.
+  - Flush까지만 해도 파일에 저장이 된다.
   - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter.flush?view=net-8.0#system-io-streamwriter-flush
 
 ```C#
