@@ -21,4 +21,19 @@ TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVaria
     ```
   - documentation: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
 
-- StreamWriter()
+
+- TextWriter 클래스
+  - abstract 클래스라서 객체화를 할 수 없다.
+  - 하위 클래스인 StreamWriter을 이용해서 객체화 할 수 있다.
+  - ```C#
+    // 이렇게 하면 TextWriter에 있는 기능만 사용할 수 있다.
+    TextWriter textWriter = new StreamWriter(path, true);
+    ```
+  - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.textwriter
+
+- StreamWriter 클래스
+  - 파일에 텍스트 데이터를 입력하는데 사용한다.
+  - ```C#
+    StreamWriter textWriter = new StreamWriter(path, true);
+    ```
+  - documentation: https://learn.microsoft.com/en-us/dotnet/api/system.io.streamwriter
