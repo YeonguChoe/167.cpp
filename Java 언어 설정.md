@@ -2,6 +2,12 @@
 
 - 컴파일 환경: OpenJDK 17.0.1
 
+## Stream
+
+- definition: 공장에 있는 컨베이어 벨트라고 생각 할수 있다. 하지만 다른 점은, 데이터를 움직인다.
+- documentation: https://www.cs.auckland.ac.nz/references/java/java1.5/tutorial/essential/io/streams.html
+- wikipedia: https://en.wikipedia.org/wiki/Stream_(computing)
+
 ### Writing data to a file
 
 ```java
