@@ -8,21 +8,21 @@
 - documentation: https://www.cs.auckland.ac.nz/references/java/java1.5/tutorial/essential/io/streams.html
 - wikipedia: https://en.wikipedia.org/wiki/Stream_(computing)
 
-### Writing data to a file
+## Writing data to a file
 
 ```java
 // OUTPUT_PATH 환경 변수에 지정된 경로에 새 파일을 만들고, 데이터를 파일에 출력할수 있도록 버퍼를 만든다.
 BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 ```
 
-- System.getenv
+### System.getenv
     - 운영체제에 저장된 환경변수를 String으로 반환한다.
     - ```java
       System.getenv("<환경변수 이름>")
       ```
     - documentation: https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/System.html#getenv()
 
-- FileWriter
+### FileWriter
     - 파일에 데이터를 기록하는 기능을 하는 클래스이다.
     - ```java 
         // FileWriter fw = new FileWriter("<파일 이름>"); // 덮어쓰기 (overwrite): 파일의 모든 데이터가 새로 쓰여진다.
@@ -33,7 +33,7 @@ BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(
     - default 버퍼 크기인 8K(8192) Byte를 사용한다.
     - documentation: https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/io/FileWriter.html
 
-- BufferedWriter
+### BufferedWriter
     - 파일에 데이터를 직접 쓰지 않고, 버퍼에 일시적으로 저장했다가 한번에 파일에 기록하는 기능을 FileWriter에 제공하는 클래스이다.
     - FileWriter만 사용해서 파일에 데이터를 저장할 수 있지만, BufferedWriter를 이용해서 성능 개선을 한다.
     - ```java         
@@ -44,14 +44,14 @@ BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(
 
     - documentation: https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/io/BufferedWriter.html
 
-### Reading data from a file
+## Reading data from a file
 
 ```java
 // 사용자가 키보드를 통해 입력하는 문자열을 읽기 위한 버퍼를 만든다. 
 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 ```
 
-- InputStreamReader
+### InputStreamReader
     - Input stream을 char 기반 스트림으로 변환해준다.
     - ```java
         InputStreamReader isr = new InputStreamReader(System.in); // 키보드의 Input Stream을 char Stream으로 변환해주는 객체를 만든다.
@@ -61,7 +61,7 @@ BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.
       ```
     - documentation: https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/io/InputStreamReader.html
 
-- BufferedReader
+### BufferedReader
     - 데이터를 버퍼에 임시 기록해서 성능을 높여주는 기능을 하는 클래스이다.
     - BufferedReader를 사용하면 사용자의 입력을 한 줄씩 받을 수 있다.
     - ```java 
@@ -87,7 +87,7 @@ IntStream.range(0, gEdges).forEach(i -> {
 });
 ```
 
-- IntStream.range(<시작값>, <끝값>)
+### IntStream.range(<시작값>, <끝값>)
     - 1개의 정수 Stream을 생성하고 <시작값>부터 <끝값> - 1을 입력한다.
     - ```java
       IntStream.range(1, 30) // 1부터 29까지의 정수를 포함하는 IntStream을 생성
@@ -96,7 +96,7 @@ IntStream.range(0, gEdges).forEach(i -> {
          });
       ```
 
-### Creating a Stream out of an array
+## Creating a Stream out of an array
 
 ```java 
 // Stream을 사용해서 1줄을 읽고, 공백 문자를 기준으로 문자열을 분할한 후, 분할된 부분을 정수로 cast 하고, 리스트로 반환한다.
@@ -105,7 +105,7 @@ List<Integer> candles = Stream.of(br.readLine().replaceAll("\\s+$", "").split(" 
         .collect(toList());
 ```
 
-- Steram.of
+### Steram.of
     - 배열을 Stream 자료형으로 변환 한다.
     - ```java 
       String[] textArray = {"One", "Two", "Three"}; // 문자열을 담은 배열을 생성한다.
